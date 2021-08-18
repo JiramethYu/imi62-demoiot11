@@ -1,9 +1,1 @@
-<!DOCTYPE html>
-<html>
-<title>HTML Tutorial</title>
-<body>
-
-<h1 class="content">62101456 Jirameth Yukachain</h1>
-
-</body>
-</html>
+$api_url = 'https://api.thingspeak.com/channels/1458765/feeds.json?results=2';
