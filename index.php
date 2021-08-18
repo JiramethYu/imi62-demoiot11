@@ -5,7 +5,7 @@
 <h1>62101456 Jirameth Yukachain</h1>
  <?php
 
-$api_url = 'https://api.thingspeak.com/channels/1458765/feeds.json?results=2';
+$api_url = 'https://api.thingspeak.com/channels/1458765/feeds.json?results=1';
 
 // Read JSON file
 $json_data = file_get_contents($api_url);
@@ -28,14 +28,14 @@ $user_data = array_slice($user_data, 0);
 <iframe src="https://thingspeak.com/channels/1458765/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" height="500" width="500" frameBorder="0" title="Iframe Example"></iframe>
  <?php
    foreach ($user_data as $user) {
-	echo "name: ".$user->field1; 
+	echo "Humidity: ".$user->field1; 
       echo " % ";
    }?> 
  <br>   
 <iframe src="https://thingspeak.com/channels/1458765/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15" height="500" width="500" frameBorder="0" title="Iframe Example"></iframe>
 <?php
    foreach ($user_data as $user) {
-	echo "name: ".$user->field2; 
+	echo "Temperature: ".$user->field2; 
       echo " C ";
    }?> 
  <br>   
