@@ -54,23 +54,6 @@ $newtime= date("d-m-Y H:i", strtotime($time));
 
 </div>
      </div>
-     <div class="col-sm-5">
-    <h2>Show Results Data</h2>   
-    <div class="container"> 
-        <h2>
-            Humidity :<?php echo $humidity; ?> % <br>
-            Temperature: <?php echo $temperature; ?> C <br>
-            Created at :<?php echo $newtime; ?>  <br>
-        </h2>
-    </div>  
-</div>
-</div>  
-    </div>
-<script type="text/JavaScript">
-function timedRefresh(timeoutPeriod){
-    setTimeout("location.reload(true);",timeoutPeriod)
-}
-
-</script>
+     
 </body>
 </html>
