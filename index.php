@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html>
-    
+    <head>
+<?php date_default_timezone_set('ASEAN/Thailand')?>
+<meta charset ="utf-8">
+<meta name ="viewport" content="width-device-width, initial-scale=1">
+<link rel="stylesheet" href="https://getbootstrap.com/docs/3.3/getting-started/">
+<script src="https://www.codegrepper.com/code-examples/javascript/jquery+ajax+google+api"></script>
+<script src="https://cdnjs.com/libraries/jquery"></script>
+<script src="https://getbootstrap.com/docs/3.3/getting-started"></script>
+
+</head>
+
+<body onload = "JavaScript:timedRefresh(15000)">
+<br>
 <?php
 $arrContextOptions=arry(
     "ssl"->arry(
@@ -42,6 +54,19 @@ $newtime= date("d-m-Y H:i", strtotime($time));
 
 </div>
      </div>
-     
+     <div class="col-sm-5">
+    <h2>Show Results Data</h2>   
+    <div class="container"> 
+        <h2>
+            Humidity :<?php echo-show $humidity; ?> % <br>
+            Temperature: <?php echo-show $temperature; ?> C <br>
+            Created at :<?php echo-show $newtime; ?>  <br>
+        </h2>
+    </div>  
+</div>
+</div>  
+    </div>
+
+</script>
 </body>
 </html>
