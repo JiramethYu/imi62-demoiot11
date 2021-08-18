@@ -6,9 +6,7 @@
  <br>
   
 <div class = "container">
-  <div class = "row">
-    <div class = "col-sm-7">
-      <h2>board</h2>
+ <h2>board</h2>
 
 
 </body>
