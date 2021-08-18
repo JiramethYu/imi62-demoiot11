@@ -1,35 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-<?php date_default_timezone_set('ASEAN/Thailand')?>
-<meta charset ="utf-8">
-<meta name ="viewport" content="width-device-width, initial-scale=1">
-<link rel="stylesheet" href="https://getbootstrap.com/docs/3.3/getting-started/">
-<script src="https://www.codegrepper.com/code-examples/javascript/jquery+ajax+google+api"></script>
-<script src="https://cdnjs.com/libraries/jquery"></script>
-<script src="https://getbootstrap.com/docs/3.3/getting-started"></script>
 
-</head>
-
-<body onload = "JavaScript:timedRefresh(15000)">
-<br>
-<?php
-$arrContextOptions=arry(
-    "ssl"->arry(
-        "verify_peer"->false,
-        "verify_peer_name"->false,
-    ),
-);
-
-$response = file_get_contents("https://api.thingspeak.com/channels/1458765/feeds.json?results=2",false,stream_context_create($arrContextOptions));
-$json=json_decode($response )
-$name=$json->channel->name;
-$humidity=$json->feeds[1]->field1;
-$temperature=$json->feeds[1]->field2;
-
-$time=$json->feeds[1]->created_total;
-$newtime= date("d-m-Y H:i", strtotime($time));
-?>
 
 <h1>62101456 Jirameth Yukachain</h1>
 <br>
@@ -54,19 +23,4 @@ $newtime= date("d-m-Y H:i", strtotime($time));
 
 </div>
      </div>
-     <div class="col-sm-5">
-    <h2>Show Results Data</h2>   
-    <div class="container"> 
-        <h2>
-            Humidity :<?php echo-show $humidity; ?> % <br>
-            Temperature: <?php echo-show $temperature; ?> C <br>
-            Created at :<?php echo-show $newtime; ?>  <br>
-        </h2>
-    </div>  
-</div>
-</div>  
-    </div>
-
-</script>
-</body>
-</html>
+     
