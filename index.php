@@ -1,1 +1,1 @@
-  <div class="center"><h1>Jirameth Yukachain</h1> </div>
+<div class="content">Jirameth Yukachain</div>
